@@ -82,8 +82,8 @@ def join():
     table=pd.DataFrame(columns=['order_id','tracking_provider','tracking_number','date_shipped','status_shipped','sku','qty'])
     for file in data:
         df=pd.read_csv(file)
-        #table=table.append(df,ignore_index=True)
-        table=pd.concat([table,df])
+        table=table.append(df,ignore_index=True)
+        #table=pd.concat([table,df])
     #st.write(table)
     table_csv= table.to_csv(index=False).encode("utf-8")
     if stateful_button('Combine', key="Merge_1"):
