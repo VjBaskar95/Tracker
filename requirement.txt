@@ -1,3 +1,0 @@
-pip install streamlit-option-menu
-streamlit
-pandas
