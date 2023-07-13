@@ -115,16 +115,23 @@ def join_process():
 
 
 #with st.sidebar:
-select=option_menu(
-menu_title=None,
-options=['Process','Merge'],
-orientation="horizontal",
+#select=option_menu(
+#menu_title=None,
+#options=['Process','Merge'],
+#orientation="horizontal",
+#)
+
+
+#if select == 'Process':
+#    file_upload()
+
+
+#if select == 'Merge':
+#    join()
+st.set_page_config(
+    page_title="Multipage App",
+    page_icon="👋",
 )
 
-
-if select == 'Process':
-    file_upload()
-
-
-if select == 'Merge':
-    join()
+st.title("Main Page")
+st.sidebar.success("Select a page above.")
