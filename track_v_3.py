@@ -22,7 +22,7 @@ def stateful_button(*args, key=None, **kwargs):
 def file_upload():
     st.header('Single File Upload ')
     global uploaded_file
-    uploaded_file = st.file_uploader("Choose a CSV file", type='csv')
+    uploaded_file = st.file_uploader("Choose a CSV/EXCEL file", type='csv')
     file_check()
 #checking the file
 
@@ -81,7 +81,7 @@ def button():
 #importing multifile and joining
 def join():
     st.header('Multi File Upload ')
-    data = st.file_uploader("Upload Tracking CSV:",type = ['csv','xlsx'],
+    data = st.file_uploader("Upload Tracking CSV/EXCEL:",type = ['csv','xlsx'],
     accept_multiple_files=True,key='join')
     table=pd.DataFrame(columns=['order_id','tracking_provider','tracking_number','date_shipped','status_shipped','sku','qty'])
     for file in data:
